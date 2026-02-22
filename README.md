@@ -48,7 +48,7 @@ Ensure you have [Node.js](https://nodejs.org/) installed on your machine.
 Clone the repository and install the dependencies:
 
 ```bash
-git clone [https://github.com/yourusername/typer.git](https://github.com/yourusername/typer.git)
+git clone [https://github.com/cloretilo/typer-names]
 cd typer
 npm install express ejs express-session
 
