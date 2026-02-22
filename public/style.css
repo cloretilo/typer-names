@@ -1,0 +1,123 @@
+:root {
+    --bg: #050505;
+    --card: #0f0f0f;
+    --card-hover: #161616;
+    --accent: #ffffff;
+    --muted: #666666;
+    --border: #1f1f1f;
+}
+
+body {
+    background: var(--bg);
+    color: var(--accent);
+    font-family: 'Inter', -apple-system, sans-serif;
+    margin: 0;
+    line-height: 1.5;
+}
+
+header {
+    text-align: center;
+    padding: 100px 20px 60px;
+}
+
+header h1 { 
+    font-size: 2.5rem; 
+    letter-spacing: 8px; 
+    font-weight: 200;
+    margin: 0;
+}
+
+header p { color: var(--muted); font-size: 0.9rem; margin-top: 15px; text-transform: uppercase; letter-spacing: 1px; }
+
+main { max-width: 900px; margin: auto; padding: 0 20px; }
+
+.category h2 {
+    font-size: 0.75rem;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-top: 60px;
+    margin-bottom: 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 15px;
+}
+
+.card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    padding: 25px;
+    border-radius: 12px;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    background: var(--card-hover);
+    border-color: #444;
+    transform: translateY(-2px);
+}
+
+.card-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.handle { font-size: 1.4rem; font-weight: 600; letter-spacing: -0.5px; }
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    background: #00ff88;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #00ff88;
+}
+
+.card-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.price { font-family: 'Courier New', monospace; font-size: 1.1rem; color: var(--accent); }
+.status-text { font-size: 0.7rem; color: var(--muted); text-transform: uppercase; }
+
+/* Estilo para productos vendidos */
+.card.sold {
+    opacity: 0.3;
+    pointer-events: none; /* No se puede hacer clic */
+}
+.card.sold .status-dot { background: var(--muted); box-shadow: none; }
+
+footer {
+    text-align: center;
+    padding: 100px 20px;
+    color: var(--muted);
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 40px;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: var(--accent);
+    color: var(--bg);
+}

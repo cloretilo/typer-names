@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typer | Premium Handleshop</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+    <header>
+        <h1>TYPER</h1>
+    </header>
+
+    <main>
+        <% inventory.forEach(section => { %>
+            <section class="category">
+                <h2><%= section.category %></h2>
+                <div class="grid">
+                    <% section.items.forEach(item => { %>
+                        <a href="https://t.me/<%= telegramUser %>?text=Hi, I am interested in buying <%= item.name %>" 
+                           class="card <%= item.status === 'Sold' ? 'sold' : '' %>">
+                            <div class="card-info">
+                                <span class="handle"><%= item.name %></span>
+                                <span class="status-dot"></span>
+                            </div>
+                            <div class="card-meta">
+                                <span class="price"><%= item.price %></span>
+                                <span class="status-text"><%= item.status %></span>
+                            </div>
+                        </a>
+                    <% }); %>
+                </div>
+            </section>
+        <% }); %>
+    </main>
+
+    <footer id="contact">
+        <p>All transactions are secure and instant.</p>
+        <div class="contact-buttons">
+            <a href="https://t.me/<%= telegramUser %>" class="btn telegram">Contact via Telegram</a>
+        </div>
+    </footer>
+
+</body>
+</html>

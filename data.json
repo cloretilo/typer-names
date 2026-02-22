@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1771800497088,
+    "category": "4 Letters (Premium)",
+    "name": "@test",
+    "price": "$1111",
+    "status": "Available"
+  },
+  {
+    "id": 1771800501111,
+    "category": "Repeaters & Patterns",
+    "name": "@test",
+    "price": "$1111",
+    "status": "Available"
+  },
+  {
+    "id": 1771800505091,
+    "category": "Rare & 3 Letters",
+    "name": "@test",
+    "price": "$1111",
+    "status": "Available"
+  },
+  {
+    "id": 1771800513306,
+    "category": "Short & Words",
+    "name": "@test",
+    "price": "$1111",
+    "status": "Available"
+  }
+]
